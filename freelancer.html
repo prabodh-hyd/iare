@@ -1,0 +1,36 @@
+<section class="instructions c-textual-content --large px-20 lg:px-32 py-20 lg:py-24">
+    <h2>Instructions</h2>
+    <p>In this exercise you will be writing code to help a freelancer communicate with a project manager by providing a
+        few utility functions to quickly calculate day- and month rates, optionally with a given discount.</p>
+    <p>We first establish a few rules between the freelancer and the project manager:</p>
+    <ul>
+        <li>The daily rate is 8 times the hourly rate;</li>
+        <li>A month has 22 billable days.</li>
+    </ul>
+    <p>If the freelancer bills the project manager per month, there is a discount applied. This can be handy if the
+        project manager has a fixed budget.</p>
+    <p>Discounts are modeled as fractional numbers (percentage) between <code>0.0</code> (<code>0%</code>, no discount)
+        and <code>0.90</code> (<code>90%</code>, maximum discount).</p>
+    <h3>1. Calculate the day rate given an hourly rate</h3>
+    <p>Implement a function to calculate the day rate given an hourly rate:</p>
+    <pre><code class="language-javascript hljs" data-highlighted="true"><span class="hljs-title function_">dayRate</span>(<span class="hljs-number">89</span>);
+    <span class="hljs-comment">// =&gt; 712</span>
+    </code></pre>
+    <p>The day rate does not need to be rounded or changed to a "fixed" precision.</p>
+    <h3>2. Calculate the month rate, given an hourly rate and a discount</h3>
+    <p>Implement a function to calculate the month rate, and apply a discount:</p>
+    <pre><code class="language-javascript hljs" data-highlighted="true"><span class="hljs-title function_">monthRate</span>(<span class="hljs-number">89</span>, <span class="hljs-number">0.42</span>);
+    <span class="hljs-comment">// =&gt; 9086</span>
+    </code></pre>
+    <p>The discount is always passed as a number, where <code>42%</code> becomes <code>0.42</code>. The result
+        <em>must</em> be rounded up to the nearest whole number.</p>
+    <h3>3. Calculate the number of workdays given a budget, rate and discount</h3>
+    <p>Implement a function that takes a budget, a rate per hour and a discount, and calculates how many full days of
+        work that covers.</p>
+    <pre><code class="language-javascript hljs" data-highlighted="true"><span class="hljs-title function_">daysInBudget</span>(<span class="hljs-number">20000</span>, <span class="hljs-number">89</span>, <span class="hljs-number">0.2002</span>);
+    <span class="hljs-comment">// =&gt; 35</span>
+    </code></pre>
+    <p>The discount is always passed as a <code>number</code>. <code>20.02%</code> is passed as <code>0.2002</code>. The
+        result is the number of days should be rounded down to full days of work.</p>
+
+</section>

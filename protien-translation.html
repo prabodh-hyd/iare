@@ -1,0 +1,78 @@
+<section class="instructions c-textual-content --large px-20 lg:px-32 py-20 lg:py-24">
+    <h2>Instructions</h2>
+    <p>Translate RNA sequences into proteins.</p>
+    <p>RNA can be broken into three nucleotide sequences called codons, and then translated to a polypeptide like so:
+    </p>
+    <p>RNA: <code>"AUGUUUUCU"</code> =&gt; translates to</p>
+    <p>Codons: <code>"AUG", "UUU", "UCU"</code>
+        =&gt; which become a polypeptide with the following sequence =&gt;</p>
+    <p>Protein: <code>"Methionine", "Phenylalanine", "Serine"</code></p>
+    <p>There are 64 codons which in turn correspond to 20 amino acids; however, all of the codon sequences and resulting
+        amino acids are not important in this exercise. If it works for one codon, the program should work for all of
+        them.
+        However, feel free to expand the list in the test suite to include them all.</p>
+    <p>There are also three terminating codons (also known as 'STOP' codons); if any of these codons are encountered (by
+        the ribosome), all translation ends and the protein is terminated.</p>
+    <p>All subsequent codons after are ignored, like this:</p>
+    <p>RNA: <code>"AUGUUUUCUUAAAUG"</code> =&gt;</p>
+    <p>Codons: <code>"AUG", "UUU", "UCU", "UAA", "AUG"</code> =&gt;</p>
+    <p>Protein: <code>"Methionine", "Phenylalanine", "Serine"</code></p>
+    <p>Note the stop codon <code>"UAA"</code> terminates the translation and the final methionine is not translated into
+        the protein sequence.</p>
+    <p>Below are the codons and resulting Amino Acids needed for the exercise.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Codon</th>
+                <th>Protein</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AUG</td>
+                <td>Methionine</td>
+            </tr>
+            <tr>
+                <td>UUU, UUC</td>
+                <td>Phenylalanine</td>
+            </tr>
+            <tr>
+                <td>UUA, UUG</td>
+                <td>Leucine</td>
+            </tr>
+            <tr>
+                <td>UCU, UCC, UCA, UCG</td>
+                <td>Serine</td>
+            </tr>
+            <tr>
+                <td>UAU, UAC</td>
+                <td>Tyrosine</td>
+            </tr>
+            <tr>
+                <td>UGU, UGC</td>
+                <td>Cysteine</td>
+            </tr>
+            <tr>
+                <td>UGG</td>
+                <td>Tryptophan</td>
+            </tr>
+            <tr>
+                <td>UAA, UAG, UGA</td>
+                <td>STOP</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Learn more about <a href="http://en.wikipedia.org/wiki/Translation_(biology)" target="_blank"
+            rel="noreferrer">protein translation on Wikipedia</a></p>
+    <p>If an invalid character or codon is encountered <em>during</em> translation, it should <code>throw</code> an
+        error with the message <code>Invalid codon</code>.</p>
+    <pre><code class="language-javascript hljs" data-highlighted="true"><span class="hljs-title function_">translate</span>(<span class="hljs-string">'AAA'</span>);
+    <span class="hljs-comment">// =&gt; Error: Invalid codon</span>
+    </code></pre>
+
+    <div class="source">
+        <hr class="c-divider --small">
+        <h3>Source</h3>
+        Tyler Long
+    </div>
+</section>
