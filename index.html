@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Shopping List</title>
+	<style>
+		.outer {
+			display: table;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		.middle {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.inner {
+			margin-left: auto;
+			margin-right: auto;
+			width: 400px;
+			font-size: large;
+			/* Whatever width you want */
+		}
+	</style>
 </head>
+
 <body>
-	<h1>My Shopping List</h1>
+
+	<div class="outer">
+		<div class="middle">
+			<div class="inner">
+				<a href="https://prabodh-hyd.github.io/iare/freelancer.html">Excercise-1: Freelancer</a>
+				<br><br><br>
+				<a href="https://prabodh-hyd.github.io/iare/protien-translation.html">Excercise-2: Protien Translation</a>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!--
+<h1>My Shopping List</h1>
 	<ul id="list">
 		<li>Eggs</li>
 		<li>Milk</li>
@@ -51,6 +90,9 @@
 			selectItem();
 		};
 	</script>
+	-->
+
 
 </body>
+
 </html>
